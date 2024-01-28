@@ -1,0 +1,232 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+html {
+    background-color: #684BB1;
+    font-family: 'Poppins', sans-serif;
+    color: #FFF;
+    background-image: url("images/bg-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    margin-top: 0;
+}
+
+header {
+    margin: 2.5rem 2.5rem 4.35rem 2.5rem;
+}
+
+header img {
+    width: 7.5rem;
+}
+
+main {
+    display: grid;
+    gap: 3.75rem;
+    margin: 0 2.5rem;
+}
+
+.hero-image {
+    margin-inline: auto;
+}
+
+.blurb {
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+}
+
+.blurb h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2.25rem;
+}
+
+.blurb p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+.button {
+    width: 12.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    border-radius: 1.25rem;
+    border: none;
+    background: #FFF;
+    color: #684BB1;
+    box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.27);
+    margin-inline: auto;
+    margin-top: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #E880E8;
+    color: #FFF;
+}
+
+footer {
+    margin-bottom: 2.5rem;
+}
+
+footer .social-media {
+    display: flex;
+    gap: 0.7rem;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+footer .social-media a {
+    border: 1px solid #FFF;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+}
+
+footer .social-media a:hover {
+    cursor: pointer;
+    border-color: #E880E8;
+}
+
+@media (min-width: 1000px) {
+    html {
+        background-image: url(images/bg-desktop.svg);
+        background-size: auto 100vh;
+    }
+
+    main {
+        grid-auto-flow: column;
+        margin-inline: 5rem;
+    }
+
+    main .blurb {
+        max-width: 32.5rem;
+        text-align: left;
+    }
+
+    header {
+        margin-top: 4rem;
+        margin-left: 5rem;
+    }
+
+    header img {
+        width: 12.5rem;
+    }
+
+    .blurb {
+        bottom: 20rem;
+        gap: 1.5rem;
+        align-content: center;
+        height: 25rem;
+    }
+
+    .blurb h1 {
+        font-size: 2.5rem;
+        line-height: 3.75rem;
+    }
+
+    .blurb p {
+        font-size: 1.25rem;
+        line-height: 1.6875rem;
+    }
+
+    .blurb button {
+        margin-inline: 0;
+        font-size: 1.125rem;
+        line-height: 1.6875rem;
+        height: 3.5rem;
+        border-radius: 1.75rem;
+        box-shadow: 2px 4px 9px 3px rgba(0, 0, 0, 0.26);
+    }
+
+    footer {
+        margin-right: 5rem;
+        position: absolute;
+        bottom: 0;
+        right: 0rem;
+    }
+
+    footer .social-media {
+        justify-content: end;
+        margin-top: 0rem;
+    }
+
+    footer .social-media div {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    footer .social-media div svg {
+        transform: translate(12.5px, 7px);
+    }
+}
